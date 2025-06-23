@@ -22,6 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <head>
+          <title>VPR Admin Panel</title>
+          <meta name="description" content="Admin panel for VPR platform" />
+        </head>
         <div className="h-screen flex overflow-hidden bg-gray-50">
           {!isAuthRoute && (
             <Sidebar
