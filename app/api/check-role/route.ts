@@ -9,8 +9,7 @@ const supabase = createClient(
 );
 
 export async function GET() {
-  // Use the manual cookie name set with js-cookie in your sign-in page
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const access_token = cookieStore.get("sb-access-token")?.value;
 
   if (!access_token) {
